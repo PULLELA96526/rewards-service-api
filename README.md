@@ -1,4 +1,4 @@
-# Rewards Program API
+# Customer-Rewards-API
 
 ## Overview
 A simple Spring Boot API that calculates customer reward points based on purchase transactions.
