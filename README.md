@@ -30,7 +30,7 @@ Request Body:
 ```
 
 ### 2. Get Rewards Summary
-**GET** `/api/rewards/customer/101`
+**GET** `/api/rewards/customer/{customerId}`
 
 Response:
 ```json
@@ -46,10 +46,10 @@ Response:
 ## Setup
 
 ### Requirements
-- Java 17+
-- Spring Boot
+- Java 17
+- Spring Boot 3.X
 - RestFul Webservice
-- Maven
+- Maven 3.8.3
 
 
 ### Run
@@ -105,11 +105,25 @@ rewardsapp/
 
 
 - For MySQL,  `application.properties` file.
+## Database Configuration :
+
+### MySQL Setup
+```properties
 # application.properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/rewardsdb
-spring.datasource.username=dbuser
-spring.datasource.password=dbpass
+spring.application.name=rewardsapp
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/sony_db
+spring.datasource.username=root
+spring.datasource.password=root
+
+# JPA/Hibernate
 spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+# Server
+server.port=8080
 
 ## Database Schema :
 
