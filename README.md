@@ -137,7 +137,7 @@ server.port=8080
 | transaction_date    | DATE         | NOT NULL          | Date of transaction             |
 | points              | INTEGER      | NOT NULL          | Calculated reward points        |
 
-## Technical Stack :computer:
+## Technical Stack :
 
 ### Backend
 - **Framework**: Spring Boot 3.x
